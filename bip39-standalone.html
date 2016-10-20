@@ -49,7 +49,7 @@
     <body>
         <div class="container">
 
-            <h1 class="text-center">Mnemonic Code Converter</h1>
+            <h1 class="text-center">Mnemonic Code Converter (non normalized)</h1>
             <hr>
             <div class="row">
                 <div class="col-md-12">
@@ -16214,14 +16214,15 @@ var Mnemonic = function(language) {
     }
 
     self.normalizeString = function(str) {
-        if (typeof str.normalize == "function") {
-            return str.normalize("NFKD");
-        }
-        else {
-            // TODO decide how to handle this in the future.
-            // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/normalize
-            return str;
-        }
+        return str;
+        // if (typeof str.normalize == "function") {
+        //     return str.normalize("NFKD");
+        // }
+        // else {
+        //     // TODO decide how to handle this in the future.
+        //     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/normalize
+        //     return str;
+        // }
     }
 
     function byteArrayToWordArray(data) {

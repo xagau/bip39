@@ -141,14 +141,15 @@ var Mnemonic = function(language) {
     }
 
     self.normalizeString = function(str) {
-        if (typeof str.normalize == "function") {
-            return str.normalize("NFKD");
-        }
-        else {
-            // TODO decide how to handle this in the future.
-            // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/normalize
-            return str;
-        }
+        return str;
+        // if (typeof str.normalize == "function") {
+        //     return str.normalize("NFKD");
+        // }
+        // else {
+        //     // TODO decide how to handle this in the future.
+        //     // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/normalize
+        //     return str;
+        // }
     }
 
     function byteArrayToWordArray(data) {
