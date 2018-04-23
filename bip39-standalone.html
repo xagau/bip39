@@ -13714,6 +13714,15 @@ bitcoin.networks.etc = {
 };
 
 
+bitcoin.networks.clo = {
+  bip32: {
+    public: 0xffffffff,
+    private: 0xffffffff
+  },
+  pubKeyHash: 0xff,
+  wif: 0xff,
+  ethereum : true
+};
 
 bitcoin.networks.abncoin = {
   magicPrefix: '\x19Abncoin Signed Message:\n',
@@ -14462,6 +14471,28 @@ bitcoin.networks.bitcoinprivate = {
     pubKeyHash:0x1325,
     scriptHash:0x13AF,
     wif: 128
+}
+
+bitcoin.networks.kobocoin = {
+   messagePrefix: '\x18Kobocoin Signed Message:\n',
+   bip32: {
+     public: 0x0488B21E,
+     private: 0x0488ADE4,
+   },
+   pubKeyHash: 0x23,
+   scriptHash: 0x1c,
+   wif: 0xa3,
+}
+
+ bitcoin.networks.komodo = {
+  messagePrefix: '\x18Komodo Signed Message:\n',
+  bip32: {
+    public: 0x0488B21E,
+    private: 0x0488ADE4
+  },
+  pubKeyHash: 0x3c,
+  scriptHash: 0x55,
+  wif: 0xbc
 }
 </script>
         <script>// Select components from sjcl to suit the crypto operations bip39 requires.
@@ -17028,6 +17059,27 @@ d+"px").css("background-color",a.isDark(e,i)?h.foreground:h.background).appendTo
             onSelect: function() {
                 network = bitcoin.networks.cannacoin;
                 DOM.bip44coin.val(19);
+            },
+        },
+        {
+             name: "Kobocoin",
+             onSelect: function() {
+                network = bitcoin.networks.kobocoin;
+                DOM.bip44coin.val(196);
+            },
+        },
+        {
+             name: "Komodo",
+             onSelect: function() {
+                network = bitcoin.networks.komodo;
+                DOM.bip44coin.val(141);
+            },
+        },
+        {
+            name: "Callisto",
+            onSelect: function() {
+                network = bitcoin.networks.clo;
+                DOM.bip44coin.val(820);
             },
         },
         {

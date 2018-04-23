@@ -588,6 +588,27 @@
             },
         },
         {
+             name: "Kobocoin",
+             onSelect: function() {
+                network = bitcoin.networks.kobocoin;
+                DOM.bip44coin.val(196);
+            },
+        },
+        {
+             name: "Komodo",
+             onSelect: function() {
+                network = bitcoin.networks.komodo;
+                DOM.bip44coin.val(141);
+            },
+        },
+        {
+            name: "Callisto",
+            onSelect: function() {
+                network = bitcoin.networks.clo;
+                DOM.bip44coin.val(820);
+            },
+        },
+        {
             name: "Clubcoin",
             onSelect: function() {
                 network = bitcoin.networks.clubcoin;
