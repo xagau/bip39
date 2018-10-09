@@ -490,6 +490,13 @@
             },
         },
         {
+            name: "PlaceHolders",
+            onSelect: function() {
+                network = bitcoin.networks.placeholders;
+                DOM.bip44coin.val(1990);
+            },
+        },
+        {
             name: "BitcoinGold",
             onSelect: function() {
                 network = bitcoin.networks.bitcoingold;
