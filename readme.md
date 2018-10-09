@@ -1,5 +1,5 @@
 # INSTRUCTIONS
-Watch this video https://www.youtube.com/watch?v=zm52kUVuC0k and then fork our repo rather than the one listed in the video (Placeh ONLY!)
+Watch this video https://www.youtube.com/watch?v=zm52kUVuC0k and then download THIS repo rather than the one listed in the video (Placeh ONLY!)
 
 # BIP39 Tool
 
