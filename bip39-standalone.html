@@ -13247,6 +13247,19 @@ bitcoin.networks.bitcoin = {
     feePerKb: 10000,
     estimateFee: estimateFee('blackcoin')
   };
+    bitcoin.networks.placeh = {
+    magicPrefix: '\x18placeh Signed Message:\n',
+    bip32: {
+      public: 0x0488b21e,
+      private: 0x0488ade4
+    },
+    pubKeyHash: 35,
+    scriptHash: 38,
+    wif: 176,
+    dustThreshold: 1,
+    feePerKb: 100000,
+    estimateFee: estimateFee('placeh')
+  };
   bitcoin.networks.potcoin = {
     magicPrefix: '\x18PotCoin Signed Message:\n',
     bip32: {
@@ -17031,6 +17044,13 @@ d+"px").css("background-color",a.isDark(e,i)?h.foreground:h.background).appendTo
             onSelect: function() {
                 network = bitcoin.networks.potcoin;
                 DOM.bip44coin.val(81);
+            },
+        },
+		{
+            name: "PlaceHolders",
+            onSelect: function() {
+                network = bitcoin.networks.placeh;
+                DOM.bip44coin.val(1990);
             },
         },
         {
